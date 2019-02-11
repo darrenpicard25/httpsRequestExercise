@@ -9,7 +9,7 @@ function getHTML (options, callback) {
       fullFile += dataChunk;
     });
     response.on('end', function () {
-      printHTML(fullFile);
+      callback(fullFile);
     });
   });
 
